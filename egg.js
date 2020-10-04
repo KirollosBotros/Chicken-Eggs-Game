@@ -6,14 +6,17 @@ function Egg(speed, type){
 	this.type = type;
 
 	this.show = function(){
-		if(this.type.localeCompare("bomb")){
-			fill(250, 0, 0);
+		if(this.type == 0){
+			fill(205, 127, 50);
 			ellipse(this.x, this.y, this.diameter, this.diameter + 10);
-		}else if (this.type.localeCompare("gem")){
-			fill(0, 250, 0);
+		}else if (this.type == 1){
+			fill(192, 192, 192);
+			ellipse(this.x, this.y, this.diameter, this.diameter + 10);
+		}else if(this.type == 2){
+			fill(255, 233, 0);
 			ellipse(this.x, this.y, this.diameter, this.diameter + 10);
 		}else{
-			fill(255);
+			fill(250, 0, 0);
 			ellipse(this.x, this.y, this.diameter, this.diameter + 10);
 		}
 	}

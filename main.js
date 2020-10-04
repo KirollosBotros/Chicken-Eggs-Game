@@ -7,7 +7,7 @@ var delay;
 var speed;
 
 function setup(){
-	createCanvas(800,500);
+	createCanvas(1000,600);
 	b = new Basket();
 	level  = 1
 	speed = 5;
@@ -16,6 +16,7 @@ function setup(){
 	score = 0;
 	eggs = [];
 	generateNewBatch(level);
+	preload();
 
 }
 
@@ -32,6 +33,8 @@ function draw(){
 	}
 		
 	background(150);
+	image(chicken, 0, 0);
+
 	eggs[eggCounter].show();
 	eggs[eggCounter].move();
 	b.show();
@@ -52,13 +55,7 @@ function collision(eggX, eggY, basketX, basketY){
 function generateNewBatch(level){
 	for(var i = 0; i < level*5+5; i++){
 		speed = (level * 3 + 2);
-		if(getType().localeCompare("gem")){
-			eggs[i] = new Egg(speed, "gem");
-		}else if(getType().localeCompare("bomb")){
-			eggs[i] = new Egg(speed, "bomb");
-		}else{
-			eggs[i] = new Egg(speed, "normal");
-		}
+			eggs[i] = new Egg(speed, getType());
 	}
 	eggCounter = 0;
 }
@@ -71,13 +68,15 @@ function newLevel(){
 }
 
 function getType(){
-	var rand = random(0, 10);
-	if(rand <= 1.5){
-		return "bomb";
-	}else if (rand > 1.5 && rand < 2.5){
-		return "gem";
-	}else if(rand > 2.5) {
-		return "normal";
+	var rand = random(10);
+	if(rand >= 5){
+		return 0;
+	}else if (rand >= 3 && rand < 5){
+		return 1;
+	}else if(rand >= 2 && rand < 3){
+		return 2;
+	}else{
+		return 3;
 	}
 }
 
@@ -87,11 +86,15 @@ function collisionProtocol(){
 		score++;
 	}else if(eggs[eggCounter].y > height){
 		eggCounter++;
-		noLoop();
+		//noLoop();
 		print(score);
 	}
 	if(eggCounter == level*5+5){
 		newLevel();
 		
 	}
+}
+
+function preload(){
+	chicken = loadImage('images/chicken.png');
 }
