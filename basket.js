@@ -8,8 +8,14 @@ function Basket(){
 		fill(50);
 		rect(this.x, this.y, this.w, this.h);
 	}
+
 	this.move = function(){
 		this.x = mouseX - this.w/2;
 		this.x = constrain(this.x, 0, width - this.w);
+	}
+
+	this.freeze = function(){
+		this.x = this.x;
+		this.y = this.y;
 	}
 }
