@@ -26,19 +26,19 @@ This program is a recreation of one of my favourite games to play as a child - C
 #### Level 1: Brown Egg Dropping
 ![GitHub Logo](images/BrownScreenshot.png)
 
-#### Level
+#### Level 1 : Silver Egg Dropping
 ![GitHub Logo](images/SilverScreenshot.png)
 
-#### Level
+#### Level 1: Sapphire Egg Dropping
 ![GitHub Logo](images/SapphireScreenshot.png)
 
-#### Level
+#### Level 1: Bomb Dropping
 ![GitHub Logo](images/BombScreenshot.png)
 
-#### Level
+#### After a level is completed, a message appears with a live countdown of 3 seconds until the next level:
 ![GitHub Logo](images/LevelCompleteScreenshot.png)
 
-#### Level
+#### When the game is over, the stats of the game are displayed in the end screen. The user can click to play again:
 ![GitHub Logo](images/GameOverScreenshot.png)
 
 
