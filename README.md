@@ -21,4 +21,7 @@ This program is a recreation of one of my favourite games to play as a child - C
 		* The game is over when your level score is less than 0
 		* Failing to catch any egg (not a bomb) will decrease your level score by 1
 		* This means you must try to catch as many eggs and avoid as many bombs as you can - as either not catching an egg or catching a bomb will lower your level score
+### Pictures of Gameplay:
+![GitHub Logo](images/BrownScreenshot)
+
 
