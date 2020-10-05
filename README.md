@@ -41,6 +41,18 @@ This program is a recreation of one of my favourite games to play as a child - C
 #### When the game is over, the stats of the game are displayed in the end screen. The user can click to play again:
 ![GitHub Logo](images/GameOverScreenshot.png)
 
+## Challenges Faced:
+As with any other project, when designing and building this game, multiple challenges arisen which required critical thinking and patience. There were 3 main obstacles I came across when creating this game:
+1. Flawed Design Approach:
+* When I initially started coding this project, I did not spend a lot of time planning it out. I had a very rough idea of what I wanted to accomplish but did not explicitly lay out a plan. This later created massive roadblocks that could have easily been avoided. For example, initially, I did not use an object-oriented approach to create this game. Because I didn't have a clear idea of what I wanted to achieve, I did not realize that the code would get so complex. Not separating the different classes from each other (such as the egg class, basket class, chicken class etc.) created a huge mess in the code base which cost me a lot of time to maintain and develop. Once I transitioned the design approach to an object-oriented model, the code became much cleaner and my thoughts, ideas, and processes became way more organized.
+2. Creating a timer:
+* When creating the countdown for the next level (as seen in one of the pictures above), I could not use the native JavaScript timer object (with methods such as setTimeout()) because of the interface design I had chosen (it would cause a lot of headaches). This meant I had to figure out a way to display a live countown without using a built in timer object. After some time I figured out a clever way to achieve this. It involved tweaking the frame rate of the main loop (controlled by the method frameHandler()) at specific times to create the effect that there is a timer when in reality, the frame rate was just heavily reduced.
+3. Setting up a proper development environment:
+* Initially, when I started this project, I was using the index.html file to test and view my code changes. This worked for some time until it came time to insert the images into the game. Since I was unaware of many browser's restrictions on which files can be accessed on a local machine, my images would not load. Furthermore, using the html file on your local machine to test and see your code in action is not a good idea since it does not depict a realistic environment of a machine that would run the code, had I decided to publish this as a website. To solve this, I completely changed my workflow by installing node.js and running a local server on my computer to simulate an environment more realistically. This also removed the restrictions normal browsers had on file access, so that I could use images in my code. I did a lot of research on local server environments so that next time, I know how to develop an application more efficiently.
+
+## Future Improvements:
+
+
 
 
 
