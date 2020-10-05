@@ -22,12 +22,12 @@ function setup(){
 }
 
 function draw(){
-
 	background(back);
 
 	if(score < 0){
 		end();
 	}
+
 	displayInfo();
 	frameHandler();
 
@@ -214,9 +214,3 @@ function showChickens(){
 		}
 	}
 }
-
-
-
-
-
-
