@@ -1,21 +1,17 @@
 function Basket(){
-	this.w = 100;
-	this.h = 100;
+	this.w = 159;
+	this.h = 178;
 	this.x = width/2 - this.w/2;
 	this.y = height - this.h;
 
 	this.show = function(){
-		fill(50);
-		rect(this.x, this.y, this.w, this.h);
+		image(bas, this.x, this.y);
 	}
 
-	this.move = function(){
-		this.x = mouseX - this.w/2;
-		this.x = constrain(this.x, 0, width - this.w);
-	}
-
-	this.freeze = function(){
-		this.x = this.x;
-		this.y = this.y;
+	this.move = function(pause){
+		if(!pause){
+			this.x = mouseX - this.w/2;
+			this.x = constrain(this.x, 0, width - this.w);
+		}
 	}
 }
