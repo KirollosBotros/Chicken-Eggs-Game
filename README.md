@@ -51,11 +51,10 @@ As with any other project, when designing and building this game, multiple chall
 * Initially, when I started this project, I was using the index.html file to test and view my code changes. This worked for some time until it came time to insert the images into the game. Since I was unaware of many browser's restrictions on which files can be accessed on a local machine, my images would not load. Furthermore, using the html file on your local machine to test and see your code in action is not a good idea since it does not depict a realistic environment of a machine that would run the code, had I decided to publish this as a website. To solve this, I completely changed my workflow by installing node.js and running a local server on my computer to simulate an environment more realistically. This also removed the restrictions normal browsers had on file access, so that I could use images in my code. I did a lot of research on local server environments so that next time, I know how to develop an application more efficiently.
 
 ## Future Improvements:
-
-
-
-
-
-
-
-
+While I am happy with the final product as it stands today, there are still some things that I would like to add in the future to improve the game:
+1. Increase the speed at each level using a logarithmic factor:
+* As of right now the speed increase is linear between each level. This is not ideal as it in a sense places a cap on the maximum level someone can reach realistically. If I were to increase the speed using a logarithmic model, the increase would not be as steep and therefore make the game more playable.
+2. Include sound:
+* Much of what makes any game special are the sound effects. This game currently does not have any sound effects, so I hope to include sound in the near future to give the player a more enjoyable experience as well as learn for myself about sound programming.
+3. Include Animations:
+* As of right now, all the images in the game are static. While there are many moving parts in the game, none of the images move beyond a simple change in location. I would like to include some animations to enrich the experience of playing the game as well as learn for myself about animations and graphics - a field I have wanted to dabble in for some time.
