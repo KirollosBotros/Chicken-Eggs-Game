@@ -12,7 +12,10 @@ var pause;
 var defeat;
 
 function setup(){
-	createCanvas(1200,700);
+	var WIDTH = 1200;
+	var HEIGHT = 700;
+	let can = createCanvas(WIDTH,HEIGHT);
+	can.position(window.innerWidth/2-WIDTH/2, window.innerHeight/2-HEIGHT/2-50);
 	b = new Basket();
 	c = [];
 	bran = new Branch();
